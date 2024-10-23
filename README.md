@@ -10,10 +10,7 @@ BookApp is a Flutter-based mobile application designed for book lovers. It allow
 - Horizontally scroll through the list of books.
 - Built with a clean architecture using Flutter Bloc for state management.
 
-## Screenshots
 
-![Home Screen](assets/images/home_screen.png)
-![Book Detail Screen](assets/images/book_detail_screen.png)
 
 ## Getting Started
 
@@ -32,3 +29,77 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/harthikss9/bookapp.git
    cd bookapp
+   ```
+
+2. **Install the dependencies:**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Run the app:**
+   - For Android:
+     ```bash
+     flutter run
+     ```
+   - For iOS (make sure you have a Mac with Xcode installed):
+     ```bash
+     flutter run
+     ```
+
+### Configuration
+
+1. **Ensure that the assets are correctly configured in `pubspec.yaml`:**
+   ```yaml
+   flutter:
+     assets:
+       - assets/images/
+   ```
+
+2. **Add more books:**
+   - You can update the list of books in `_onLoadBooks` method inside `book_bloc.dart` to add more books or modify the existing ones.
+
+## Project Structure
+
+- **lib/bloc/**: Contains the Bloc implementation for managing the state.
+- **lib/models/**: Data model for the book entity.
+- **lib/screens/**: UI screens, including the home page and book detail page.
+- **lib/widgets/**: Reusable widgets such as book image and sort buttons.
+- **assets/**: Folder containing images used in the app.
+
+## How to Add New Books
+
+1. Place the book cover image inside the `assets/images/` folder.
+2. Update the `_onLoadBooks` function in `book_bloc.dart` to add the new book details:
+   ```dart
+   Book(
+     title: "New Book Title",
+     author: "Author Name",
+     description: "A brief description of the book...",
+     imageUrl: "assets/images/new_book_image.png",
+   );
+   ```
+
+## Built With
+
+- [Flutter](https://flutter.dev/) - The framework used
+- [Bloc](https://bloclibrary.dev/) - State management library
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the project.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out:
+- **GitHub**: [@harthikss9](https://github.com/harthikss9)
+- **Email**: harthiksonpole033@gmail.com
